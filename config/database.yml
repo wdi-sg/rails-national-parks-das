@@ -79,7 +79,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: rails-national-parks-das_production
-  username: rails-national-parks-das
-  password: <%= ENV['RAILS-NATIONAL-PARKS-DAS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
