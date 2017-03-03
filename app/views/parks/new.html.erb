@@ -1,2 +1,14 @@
-<h1>Parks#new</h1>
-<p>Find me in app/views/parks/new.html.erb</p>
+<div class="container">
+  <h1>Parks#new</h1>
+  <%#= form_for @new_park do |f| %>
+    <%#= f.text_field :name %>
+    <%#= f.text_field :description %>
+    <%#= f.text_field :picture %>
+  <%# end %>
+  <%= bootstrap_form_for(@new_park)do |f|%>
+    <%= f.text_field :name, label: 'Parl Name', placeholder: 'Enter the Park New'%>
+    <%= f.text_field :description %>
+    <%= f.text_field :picture, help: "Please enter valid url", icon: "camera" %>
+    <%= f.submit :"Submit" %>
+  <%end%>
+</div>

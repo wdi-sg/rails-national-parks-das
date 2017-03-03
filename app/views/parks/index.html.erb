@@ -7,6 +7,8 @@
       <a href="/parks/<%= park.id%>" class="thumbnail">
         <h3>
           <%= park.name %></h3>
+          <p><%= link_to park.name, park_path(park.id), class: "btn btn-primary" %></p>
+          <p><%= link_to "New Park", new_park_path, class: "btn btn-success" %></p>
         </a>
       </div>
       <%end%>
