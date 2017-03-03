@@ -1,5 +1,14 @@
 <h1>All Parks</h1>
+<div class="container">
 
-<% @parks.each do |park| %>
-  <pre><<%= park.inspect %>
-<%end%>
+  <% @parks.each do |park| %>
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <a href="/parks/<%= park.id%>" class="thumbnail">
+        <h3>
+          <%= park.name %></h3>
+        </a>
+      </div>
+      <%end%>
+    </div>
+</div>
