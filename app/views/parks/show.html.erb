@@ -1,11 +1,13 @@
 <h1>Park</h1>
 
-<h4>Name:</h4>
-<p><%= @parks.name %></p>
+<strong>Name:</strong> <%= @parks.name %>
+<br>
 
-<h4>Desciption:</h4>
-<%= @parks.description %>
+<strong>Desciption:</strong> <%= @parks.description %>
+<br>
 
-<h4>picture:</h4>
-<img src="<%= @parks.picture %>" alt="Park Picture" width="400">
-<p><%= link_to "Edit Park", edit_park_path, class: "btn btn-success" %></p>
+<strong>Picture:</strong>
+<br>
+<img src="<%= @parks.picture %>" width="600px", alt="Park Picture">
+
+<p><%= link_to "Edit Park", edit_park_path, class: "btn btn-success" %> <%= link_to "Delete Park", edit_park_path, class: "btn btn-danger disabled" %></p>

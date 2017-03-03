@@ -1,14 +1,12 @@
+<h1>Create New Park</h1>
+
 <div class="container">
-  <h1>Parks#new</h1>
-  <%#= form_for @new_park do |f| %>
-    <%#= f.text_field :name %>
-    <%#= f.text_field :description %>
-    <%#= f.text_field :picture %>
-  <%# end %>
-  <%= bootstrap_form_for(@new_park)do |f|%>
-    <%= f.text_field :name, label: 'Park Name', placeholder: 'Enter the Park New'%>
+
+  <%= bootstrap_form_for(@new_park, inline_errors: true) do |f| %>
+    <%= f.text_field :name, label: "Park Name", placeholder: "Enter the park name" %>
     <%= f.text_field :description %>
-    <%= f.text_field :picture, help: "Please enter valid url", icon: "camera" %>
-    <%= f.submit :"Submit" %>
-  <%end%>
+    <%= f.text_field :picture, label: "Picture URL", help: "Please enter valid url", icon: "camera"%>
+    <%= f.primary "Submit"%>
+  <% end %>
+
 </div>
